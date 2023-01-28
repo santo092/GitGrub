@@ -1,19 +1,17 @@
 {
-  "name": "node-handlebars-passport-boilerplate",
+  "name": "handlebars-passport-boilerplate",
   "version": "1.0.0",
   "description": "Project 2 Starter With Auth",
   "main": "server.js",
+  "engines": {
+    "node": "16.17.0"
+  },
   "scripts": {
-    "start": "node server.js",
+    "start": "serve -s build",
     "lint": "eslint \"**/*.js\" --quiet",
     "fix": "eslint --fix .",
-    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit",
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "build": "bower install && grunt build",
+    "start": "nf start"
   },
   "license": "ISC",
   "dependencies": {
@@ -39,5 +37,18 @@
     "eslint-plugin-prettier": "^3.0.1",
     "mocha": "^5.2.0",
     "prettier": "^1.16.4"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santo092/GitGrub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/santo092/GitGrub/issues"
+  },
+  "homepage": "https://github.com/santo092/GitGrub#readme"
 }
