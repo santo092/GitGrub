@@ -7,7 +7,13 @@
     "start": "node server.js",
     "lint": "eslint \"**/*.js\" --quiet",
     "fix": "eslint --fix .",
-    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
   },
   "license": "ISC",
   "dependencies": {
@@ -34,14 +40,4 @@
     "mocha": "^5.2.0",
     "prettier": "^1.16.4"
   }
-
-
-"scripts": {
-  "start": "node index.js",
-  "dev": "react-scripts start",
-  "start": "serve -s build",
-  "build": "react-scripts build",
-  "test": "react-scripts test --env=jsdom",
-  "eject": "react-scripts eject",
-  "heroku-postbuild": "npm run build"
 }
